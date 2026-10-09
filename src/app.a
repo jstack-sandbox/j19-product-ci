@@ -1,0 +1,3 @@
+export fn app() -> int {
+  return 0
+}

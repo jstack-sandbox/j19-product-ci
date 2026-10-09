@@ -1,0 +1,5 @@
+import { app } from '../src/app.a'
+
+test('the app starts at zero') {
+  expect(app()).toBe(0)
+}

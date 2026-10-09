@@ -1,0 +1,22 @@
+commands_restrictions:
+  queue:
+    conditions:
+      - or:
+          - sender-permission >= write
+          - sender = sandbox-builder[bot]
+queue_rules:
+  - name: default
+    batch_size: 1
+    max_checks_retries: 1
+    merge_method: merge
+    checks_timeout: 30 minutes
+    queue_conditions:
+      - "check-success=00 policy"
+      - "check-success=jstack/lock"
+      - "check-success=jstack/facts"
+      - "check-success=01 lint"
+      - "check-success=02 tests"
+    merge_conditions:
+      - "check-success=00 policy"
+      - "check-success=01 lint"
+      - "check-success=02 tests"

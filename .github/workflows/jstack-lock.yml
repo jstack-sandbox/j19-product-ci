@@ -1,0 +1,27 @@
+name: jstack-lock
+run-name: lock replay ${{ inputs.commit }}
+on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        required: true
+      commit:
+        required: true
+      planted:
+        required: true
+permissions: {}
+jobs:
+  replay:
+    name: replay
+    runs-on: ubuntu-24.04
+    permissions: {}
+    steps:
+      - name: run the change's tests against each named planted bug
+        env:
+          COMMIT: ${{ inputs.commit }}
+        run: |
+          curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/jstack-fixtures/$COMMIT/lock-replay.json" -o lock-replay.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lock-replay
+          path: lock-replay.json

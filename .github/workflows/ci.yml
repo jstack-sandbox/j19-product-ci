@@ -1,0 +1,12 @@
+name: ci
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tests:
+    name: 02 tests
+    runs-on: ubuntu-24.04
+    environment: ci-release
+    steps:
+      - run: echo "the runner-a tests pass"
