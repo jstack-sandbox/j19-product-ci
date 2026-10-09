@@ -1,5 +1,4 @@
 {
-  "jstack": {"version": "1.4.6", "checksum": "sha256:6304bcb567f355372fe64b754c50319ea52977d10f19333caee507e02de1b811"},
   "owners": {"owner": "jstack-sandbox-owner"},
   "profiles": {"lang-a": {}, "runner-a": {}},
   "required_checks": {
