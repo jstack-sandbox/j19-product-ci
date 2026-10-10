@@ -1,10 +1,10 @@
 {
+  "jstack": {"version": "1.4.1", "checksum": "sha256:50e293c3b6f2f100c9862f57c9dbdc242820637a0937c3cc358b7c6184894151"},
   "owners": {"owner": "jstack-sandbox-owner"},
-  "profiles": {"lang-a": {}, "runner-a": {}},
+  "profiles": {"lang-a": {}},
   "required_checks": {
     "00 policy": {"producer": {"app": "jstack"}},
     "jstack/description": {"producer": {"app": "jstack"}},
-    "jstack/lock": {"producer": {"app": "jstack"}},
     "02 tests": {"producer": {"workflow": ".github/workflows/ci.yml", "job": "tests"}}
   }
 }
