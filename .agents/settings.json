@@ -1,7 +1,8 @@
 {
   "jstack": {"version": "1.4.1", "checksum": "sha256:50e293c3b6f2f100c9862f57c9dbdc242820637a0937c3cc358b7c6184894151"},
   "owners": {"owner": "jstack-sandbox-owner"},
-  "profiles": {"lang-a": {}},
+  "profiles": {"lang-a": {}, "queue-a": {}},
+  "merge_queue": {"app": "mergify"},
   "required_checks": {
     "00 policy": {"producer": {"app": "jstack"}},
     "jstack/description": {"producer": {"app": "jstack"}},
