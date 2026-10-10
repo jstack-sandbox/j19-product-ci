@@ -1,5 +1,5 @@
 {
-  "jstack": {"version": "1.4.1", "checksum": "sha256:50e293c3b6f2f100c9862f57c9dbdc242820637a0937c3cc358b7c6184894151"},
+  "jstack": {"version": "1.4.0", "checksum": "sha256:5c666ecfc32a5ab7ea3deb41032fd137e698d78b464ed870b99502ff695aedc0"},
   "owners": {"owner": "jstack-sandbox-owner"},
   "profiles": {"lang-a": {}, "runner-a": {}},
   "required_checks": {
