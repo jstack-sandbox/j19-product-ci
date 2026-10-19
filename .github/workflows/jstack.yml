@@ -105,13 +105,13 @@ jobs:
                 '{kind: "release-missing", version: $version, file: $file, rule: "MERGE-035", fix: {needs: "owner"}}')"
           }
           if ! assets=$(curl -sSf -H "Authorization: Bearer $JSTACK_TOKEN" -H "Accept: application/vnd.github+json" \
-            "$GITHUB_API_URL/repos/jstack-sandbox/jstack/releases/tags/v$version"); then
+            "$GITHUB_API_URL/repos/jstack-sandbox/elsewhere/releases/tags/v$version"); then
             missing "release v$version"
           fi
           for file in checksums.txt "$program" "$archive"; do
             id=$(jq -r --arg file "$file" '.assets[] | select(.name == $file) | .id' <<< "$assets")
             if [ -z "$id" ] || ! curl -sSfL -H "Authorization: Bearer $JSTACK_TOKEN" -H "Accept: application/octet-stream" \
-              -o "$release/$file" "$GITHUB_API_URL/repos/jstack-sandbox/jstack/releases/assets/$id"; then
+              -o "$release/$file" "$GITHUB_API_URL/repos/jstack-sandbox/elsewhere/releases/assets/$id"; then
               missing "$file"
             fi
           done
