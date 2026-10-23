@@ -3,3 +3,8 @@
 # Machinery
 /.github/ @jstack-sandbox-owner
 /src/ @jstack-sandbox-owner
+
+# jstack: machinery
+/.agents/settings.json @jstack-sandbox-owner
+/.github/CODEOWNERS @jstack-sandbox-owner
+/.github/workflows/jstack.yml @jstack-sandbox-owner
