@@ -8,5 +8,6 @@
     "jstack/lock": {"producer": {"app": "jstack"}},
     "02 tests": {"producer": {"workflow": ".github/workflows/ci.yml", "job": "tests"}}
   },
-  "sweep": false
+  "sweep": false,
+  "sessions": {"models": {}}
 }
