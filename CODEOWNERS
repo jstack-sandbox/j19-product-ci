@@ -1,6 +1,0 @@
-* @jstack-sandbox-owner
-
-# jstack: machinery
-/.github/ @jstack-sandbox-owner
-/.agents/settings.json @jstack-sandbox-owner
-/CODEOWNERS @jstack-sandbox-owner
