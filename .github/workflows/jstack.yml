@@ -16,8 +16,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: "*/15 * * * *"
 permissions:
   contents: read
 jobs:
