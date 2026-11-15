@@ -13,7 +13,7 @@ permissions: {}
 jobs:
   replay:
     name: replay
-    runs-on: ubuntu-24.04
+    runs-on: ${{ vars.CI_RUNS_ON }}
     permissions: {}
     steps:
       - name: run the change's tests against each named planted bug
