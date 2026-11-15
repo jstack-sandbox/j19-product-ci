@@ -6,7 +6,7 @@ permissions:
 jobs:
   tests:
     name: 02 tests
-    runs-on: ${{ vars.CI_RUNS_ON }}
+    runs-on: ubuntu-24.04
     environment: ci-release
     steps:
       - run: echo "the runner-a tests pass"
